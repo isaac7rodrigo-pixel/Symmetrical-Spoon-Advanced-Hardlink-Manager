@@ -1,0 +1,14 @@
+[package]
+name = "hardlink-manager"
+version = "0.1.0"
+edition = "2021"
+description = "Read-only hardlink detection engine and Double Commander plugin scaffolding."
+license = "MIT"
+
+[lib]
+name = "hardlink_manager"
+crate-type = ["rlib", "cdylib"]
+
+[[bin]]
+name = "hm-probe"
+path = "src/bin/hm_probe.rs"
