@@ -77,3 +77,39 @@ Probe a path from the command line:
 ```bash
 cargo run --bin hm-probe -- <path>
 ```
+
+## Windows beginner quick start
+
+These commands assume you are using PowerShell and want the repository folder to be named `Symmetrical Spoon Advanced Hardlink Manager` on your PC.
+
+1. Install Rust from <https://www.rust-lang.org/tools/install>. Use the default installer option when prompted, then close and reopen PowerShell.
+2. Check that Rust is available:
+
+   ```powershell
+   cargo --version
+   rustc --version
+   ```
+
+3. Clone this repository into your Documents folder. Because the local folder name contains spaces, keep the quotation marks:
+
+   ```powershell
+   cd $HOME\Documents
+   git clone https://github.com/isaac7rodrigo-pixel/Symmetrical-Spoon-Advanced-Hardlink-Manager "Symmetrical Spoon Advanced Hardlink Manager"
+   cd "Symmetrical Spoon Advanced Hardlink Manager"
+   ```
+
+4. Confirm you are in the right folder:
+
+   ```powershell
+   dir
+   ```
+
+   You should see `Cargo.toml`, `README.md`, `src`, and `tests`.
+
+5. Build and run `hm-probe` against the current folder:
+
+   ```powershell
+   cargo run --bin hm-probe -- .
+   ```
+
+If you choose a different local folder name, replace only the quoted folder name in the `git clone` and `cd` commands. The `hm-probe` command stays the same.
